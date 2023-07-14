@@ -1,0 +1,150 @@
+:root {
+  --FontBold: 'SFProDisplayBold';
+  --FontRegular: 'SFProDisplayRegular';
+  --FontLight: 'SFProDisplayLight';
+}
+
+.aboutme-icon {
+  position: absolute;
+  width: 50vw;
+  height: 401px;
+  animation: rotate 7s infinite linear;
+  scale: 0.95;
+  /* background: red; */
+}
+
+.stroke-icon {
+  width: 70vw;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(25px);
+  }
+
+  50% {
+    transform: translateX(0);
+    scale: 1;
+  }
+
+  100% {
+    rotate: -360deg;
+    transform: translateX(25px);
+  }
+}
+
+.svg-profile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  /* background: red; */
+}
+
+.profile-gif {
+  width: 418px;
+  height: 401px;
+
+  /* background: red; */
+}
+
+.profile-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 418px;
+
+  /* -webkit-clip-path: url(#clip-shape);  */
+  /* Safari, Chrome */
+  /* clip-path: circle(10% at 30%); */
+  /* Standard */
+  /* clip-path: ellipse(202px); */
+  /* mask-image: url(#clip-shape); */
+  /* clip-path: circle(10% at 50%); */
+}
+@media (min-width: 850px) {
+  .aboutme-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 10vh;
+    width: 90vw;
+    /* background: red; */
+    margin: auto;
+    height: 100vh;
+  }
+  .aboutme-section p {
+    /* width: 40vw; */
+    font-family: var(--FontRegular);
+    font-size: 1.3rem;
+    margin-top: 7.5px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .para-section {
+    width: 90%;
+  }
+  .aboutme-icon {
+    width: 80vw;
+    /* height: ; */
+    /* height: 401px; */
+    /* background: red; */
+  }
+
+  .profile-gif {
+    width: 80vw;
+    height: inherit;
+  }
+
+  .aboutme-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    place-items: center;
+    padding-top: 10vh;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .aboutme-section p {
+    /* width: 40vw; */
+    font-size: 1.1rem;
+    margin-top: 3vh;
+    margin-bottom: 25px;
+  }
+}
+
+.para-links {
+  transition: var(--transition);
+  font-family: var(--FontBold);
+}
+
+.para-links:hover {
+  color: black;
+}
+
+.para-links {
+  position: relative;
+  display: inline-block;
+}
+
+.para-links::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s ease;
+}
+
+.para-links:hover::before {
+  width: 100%;
+}
+
+.stroke-icon {
+  position: absolute;
+  /* display: none; */
+}

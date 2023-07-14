@@ -1,0 +1,156 @@
+body {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --FontBold: 'SFProDisplayBold';
+  --FontRegular: 'SFProDisplayRegular';
+  --FontLight: 'SFProDisplayLight';
+  --transition: all 0.5s ease-in;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid {
+  position: relative;
+  overflow: hidden;
+  z-index: 91;
+}
+
+.indexer {
+  z-index: -91;
+}
+
+.grid-image {
+  object-fit: cover;
+}
+
+.grid::after {
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: absolute;
+  bottom: -100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  width: 100%;
+  height: 100%;
+  align-items: end;
+  justify-content: end;
+  justify-items: end;
+  font-family: var(--FontBold);
+  /* display: none; */
+  opacity: 0;
+  color: white;
+
+  /* transition: all 1s ease-in; */
+  transition: all 0.4s ease-in;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  /* transition: all 1s ease-in; */
+}
+
+.info-header svg {
+  margin-left: 15px;
+  /* transition: all 1s ease-in; */
+}
+
+.info p {
+  font-size: 20px;
+  width: 90%;
+  margin: auto;
+
+  font-family: var(--FontRegular);
+}
+
+.grid:hover .info {
+  /* transition: all 1s ease-in; */
+  bottom: 0%;
+  opacity: 1;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+}
+
+.info-box {
+  transition: all 1s ease-in;
+  position: absolute;
+  bottom: 10%;
+  /* float: bottom; */
+  /* place-items: end; */
+}
+
+@media (max-width: 850px) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 1px; */
+    z-index: -10;
+    padding-top: 10vh;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+  }
+
+  .grid {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50vw;
+  }
+
+  .grid-hero {
+    width: 100vw;
+    height: 100vh;
+    /* margin-top: 10vh; */
+
+    object-fit: cover;
+  }
+
+  .hero-image {
+    width: 100vw;
+    /* height: 90vh; */
+    /* margin-top: 10vh; */
+
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 850px) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 10vh;
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25vw;
+  }
+  .grid-hero {
+    height: 90vh;
+  }
+}
