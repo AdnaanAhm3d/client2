@@ -323,6 +323,18 @@ body {
   cursor: pointer;
 }
 
+.collapse-btn svg {
+  margin-bottom: 3px;
+}
+
+.indent p {
+  padding-left: 20px;
+}
+
+.collapse-btn h4 {
+  display: flex;
+}
+
 .fre-scans-tab h4 {
   /* margin-top: 24px; */
   font-family: var(--FontTextSemi);
@@ -593,6 +605,10 @@ li {
 }
 
 @media (min-width: 850px) {
+  .indent p {
+    padding-left: 20px;
+  }
+
   .project-center {
     width: 65vw;
     margin: auto;

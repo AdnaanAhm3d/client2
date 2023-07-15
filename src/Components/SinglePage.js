@@ -151,26 +151,28 @@ const SinglePage = () => {
           </div>
           <div className='jtbd'>
             <h3>JTBD</h3>
-            <div className='jtbd-container'>
+            <div className='jtbd-container indent'>
               <button className='collapse-btn jtb-' onClick={collapsedJFunc}>
                 <h4>
-                  <svg
-                    width='11'
-                    height='9'
-                    viewBox='0 0 11 9'
-                    fill='none'
-                    className={`${
-                      collapsedJ
-                        ? 'fre-diamond pointercollapsed'
-                        : 'fre-diamond pointeropen'
-                    }`}
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
-                      fill='black'
-                    />
-                  </svg>
+                  <div className='svg-indent'>
+                    <svg
+                      width='11'
+                      height='9'
+                      viewBox='0 0 11 9'
+                      fill='none'
+                      className={`${
+                        collapsedJ
+                          ? 'fre-diamond pointercollapsed'
+                          : 'fre-diamond pointeropen'
+                      }`}
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
+                        fill='black'
+                      />
+                    </svg>
+                  </div>
                   TLDR; What are JTBD’s?
                 </h4>
               </button>
@@ -334,26 +336,28 @@ const SinglePage = () => {
             </p>
             <div className='fre-scans-tab'>
               <div className='fre-scans-tab-grey'>
-                <button className='collapse-btn' onClick={collapsedFunc}>
+                <button className='collapse-btn ' onClick={collapsedFunc}>
                   <h4>
-                    <svg
-                      width='11'
-                      height='9'
-                      viewBox='0 0 11 9'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                      className={`${
-                        collapsed
-                          ? 'fre-diamond pointercollapsed'
-                          : 'fre-diamond pointeropen'
-                      }`}
-                    >
-                      <path
-                        d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
-                        fill='black'
-                      />
-                    </svg>
-                    FRE: Scans Tab
+                    <div className='svg-indent'>
+                      <svg
+                        width='11'
+                        height='9'
+                        viewBox='0 0 11 9'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                        className={`${
+                          collapsed
+                            ? 'fre-diamond pointercollapsed'
+                            : 'fre-diamond pointeropen'
+                        }`}
+                      >
+                        <path
+                          d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
+                          fill='black'
+                        />
+                      </svg>
+                      FRE: Scans Tab
+                    </div>
                   </h4>
                 </button>
 
@@ -392,23 +396,25 @@ const SinglePage = () => {
               <div className='fre-scans-tab-grey'>
                 <button className='collapse-btn' onClick={collapsedFuncM}>
                   <h4>
-                    <svg
-                      width='11'
-                      height='9'
-                      viewBox='0 0 11 9'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                      className={`${
-                        collapsedM
-                          ? 'fre-diamond pointercollapsed'
-                          : 'fre-diamond pointeropen'
-                      }`}
-                    >
-                      <path
-                        d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
-                        fill='black'
-                      />
-                    </svg>
+                    <div className='svg-indent'>
+                      <svg
+                        width='11'
+                        height='9'
+                        viewBox='0 0 11 9'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                        className={`${
+                          collapsedM
+                            ? 'fre-diamond pointercollapsed'
+                            : 'fre-diamond pointeropen'
+                        }`}
+                      >
+                        <path
+                          d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
+                          fill='black'
+                        />
+                      </svg>
+                    </div>
                     FRE: Migrations tab
                   </h4>
                 </button>
@@ -498,23 +504,25 @@ const SinglePage = () => {
               <div className=''>
                 <button className='collapse-btn' onClick={collapsedNFunc}>
                   <h4>
-                    <svg
-                      width='11'
-                      height='9'
-                      viewBox='0 0 11 9'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                      className={`${
-                        collapsedN
-                          ? 'fre-diamond pointercollapsed'
-                          : 'fre-diamond pointeropen'
-                      }`}
-                    >
-                      <path
-                        d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
-                        fill='black'
-                      />
-                    </svg>
+                    <div className='svg-indent'>
+                      <svg
+                        width='11'
+                        height='9'
+                        viewBox='0 0 11 9'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                        className={`${
+                          collapsedN
+                            ? 'fre-diamond pointercollapsed'
+                            : 'fre-diamond pointeropen'
+                        }`}
+                      >
+                        <path
+                          d='M5.5 8.5L0.736861 0.249999L10.2631 0.25L5.5 8.5Z'
+                          fill='black'
+                        />
+                      </svg>
+                    </div>
                     🌠 North Star
                   </h4>
                 </button>
