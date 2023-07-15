@@ -6,10 +6,10 @@
 
 .aboutme-icon {
   position: absolute;
-  width: 50vw;
-  height: 401px;
+  width: 401px;
+  /* height: 401px; */
   animation: rotate 7s infinite linear;
-  scale: 0.95;
+  /* scale: 0.95; */
   /* background: red; */
 }
 
@@ -28,7 +28,7 @@
   }
 
   100% {
-    rotate: -360deg;
+    rotate: 360deg;
     transform: translateX(25px);
   }
 }

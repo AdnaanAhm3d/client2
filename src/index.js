@@ -14,6 +14,7 @@ import './project.css'
 import './aboutme.css'
 import './contact.css'
 import './singlepage.css'
+import './loader2.css'
 import DefaultContextProvider from './Contexts/DefaultContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

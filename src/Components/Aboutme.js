@@ -1,22 +1,42 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-
+import Loader from './loader'
 import { useRef } from 'react'
-import profilepic from '../Assets/1.webp'
+import profilepic from '../Assets/1a.webp'
+import stroke from '../Assets/Images/Component 15.png'
 import { Link } from 'react-router-dom'
 
 const Aboutme = () => {
-  // const isNewSession = !sessionStorage.getItem('sessionFlag')
+  const [loader, setLoader] = useState(true)
+  // const [loader, setLoader} = useContext(DefaultContext)
+  const isNewSession = !sessionStorage.getItem('sessionFlag')
+  console.log(isNewSession)
+  // seta(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      sessionStorage.setItem('sessionFlag', 'true')
+      setLoader(false)
+      console.log(isNewSession)
+    }, 2000)
 
-  // sessionStorage.setItem('sessionFlag', 'true')
-  // console.log(isNewSession)
+    // return () => clearTimeout(timer)
+  }, [])
   return (
     <div>
+      {loader && isNewSession ? (
+        <>
+          <Loader />
+        </>
+      ) : (
+        ''
+      )}
       <Navbar />
       <div className='aboutme-section'>
         <div className='svg-profile'>
           <img src={profilepic} className='profile-gif'></img>
           {/* <img src={profilepic} alt='' className='profile-pic' /> */}
+          <img src={stroke} className='aboutme-icon'></img>
+          {/* 
           <svg
             // width='418'
             // height='401'
@@ -32,13 +52,12 @@ const Aboutme = () => {
               className='path1'
               id='path1'
             /> */}
-
-            <path
-              d='M309.916 355.088L335.718 336.84C386.457 300.955 414.653 241.084 410 179.112C407.706 148.561 397.52 119.129 380.438 93.6965L369.973 78.1157C350.128 48.5678 319.442 28.0263 284.56 20.9393L252.601 14.446C210.771 5.94722 168.503 26.8938 149.931 65.3259C137.93 90.1603 115.563 108.419 88.829 115.205L82.3019 116.862C34.4826 129.001 1 172.044 1 221.38V228.096C1 238.978 2.52523 249.807 5.53119 260.266L7.51841 267.18C25.7595 330.649 79.5813 377.483 144.962 386.778L166.28 389.809C216.836 396.996 268.226 384.574 309.916 355.088Z'
-              stroke='black'
-              className='stroke-icon'
-            />
-          </svg>
+          <path
+            d='M309.916 355.088L335.718 336.84C386.457 300.955 414.653 241.084 410 179.112C407.706 148.561 397.52 119.129 380.438 93.6965L369.973 78.1157C350.128 48.5678 319.442 28.0263 284.56 20.9393L252.601 14.446C210.771 5.94722 168.503 26.8938 149.931 65.3259C137.93 90.1603 115.563 108.419 88.829 115.205L82.3019 116.862C34.4826 129.001 1 172.044 1 221.38V228.096C1 238.978 2.52523 249.807 5.53119 260.266L7.51841 267.18C25.7595 330.649 79.5813 377.483 144.962 386.778L166.28 389.809C216.836 396.996 268.226 384.574 309.916 355.088Z'
+            stroke='black'
+            className='stroke-icon'
+          />
+          {/* </svg> */}
         </div>
 
         <div className='para-section'>

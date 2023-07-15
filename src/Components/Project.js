@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { useContext, useState, useEffect } from 'react'
 
 import { DefaultContext } from '../Contexts/DefaultContext'
+import Loader from './loader'
 
 import image1 from '../Assets/Images/image-1.webp'
 import image2 from '../Assets/Images/image-2.webp'
@@ -19,9 +20,28 @@ import heroimage from '../Assets/Images/Hero image.png'
 
 const Project = () => {
   const { toggleNav, setToggleNav } = useContext(DefaultContext)
+  const [loader, setLoader] = useState(true)
+  const isNewSession = !sessionStorage.getItem('sessionFlag')
+  console.log(isNewSession)
+  // seta(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      sessionStorage.setItem('sessionFlag', 'true')
+      setLoader(false)
+      console.log(isNewSession)
+    }, 2000)
 
+    // return () => clearTimeout(timer)
+  }, [])
   return (
     <>
+      {loader && isNewSession ? (
+        <>
+          <Loader />
+        </>
+      ) : (
+        ''
+      )}
       <Navbar />
       <div className='project-grid '>
         {/* <Link to='/microsoftmigration'>

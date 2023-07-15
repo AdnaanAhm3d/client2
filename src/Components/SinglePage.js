@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
+import Loader from './loader'
 
 import Navbar from './Navbar'
 // images
@@ -18,11 +19,11 @@ import mobileappswitcher from '../Assets/Images/Mobile app switcher.webp'
 import heroimg from '../Assets/Images/Hero image.png'
 // videos
 
-import migratingcontainers from '../Assets/Videos/Migrating containers.mov'
+import migratingcontainers from '../Assets/Videos/Migrating containers-1.mp4'
 import takethetourscans from '../Assets/Videos/Take the tour_scans.mov'
-import scanningcontainers from '../Assets/Videos/Scanning containers.mov'
+import scanningcontainers from '../Assets/Videos/scanning-container-1.mp4'
 import tourmigrations from '../Assets/Videos/Take the tour_migrations.mov'
-import northstar from '../Assets/Videos/North star.mov'
+import northstar from '../Assets/Videos/North star-1.mp4'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -74,8 +75,30 @@ const SinglePage = () => {
     }
   }
 
+  const [loader, setLoader] = useState(true)
+  // const [loader, setLoader} = useContext(DefaultContext)
+  const isNewSession = !sessionStorage.getItem('sessionFlag')
+  console.log(isNewSession)
+  // seta(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      sessionStorage.setItem('sessionFlag', 'true')
+      setLoader(false)
+      console.log(isNewSession)
+    }, 2000)
+
+    // return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div>
+      {loader && isNewSession ? (
+        <>
+          <Loader />
+        </>
+      ) : (
+        ''
+      )}
       <Navbar />
 
       <div className='project-div'>
@@ -129,7 +152,7 @@ const SinglePage = () => {
           <div className='jtbd'>
             <h3>JTBD</h3>
             <div className='jtbd-container'>
-              <button className='collapse-btn' onClick={collapsedJFunc}>
+              <button className='collapse-btn jtb-' onClick={collapsedJFunc}>
                 <h4>
                   <svg
                     width='11'
