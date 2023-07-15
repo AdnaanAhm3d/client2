@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 // import profilegif from '../Assets/Videogif.gif'
 import stroke from '../Assets/Images/Component 15.png'
 
-import profilepic from '../Assets/1a.webp'
+import profilepic from '../Assets/123.webp'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 function ContactForm() {
@@ -86,7 +86,7 @@ function ContactForm() {
           <div className='contactinfo-section'>
             <div className='svg-profile'>
               <img src={profilepic} className='profile-gif'></img>
-              <img src={stroke} className='aboutme-icon'></img>
+              {/* <img src={stroke} className='aboutme-icon'></img> */}
 
               {/* <svg
                 viewBox='0 0 418 401'

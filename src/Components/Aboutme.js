@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import Loader from './loader'
 import { useRef } from 'react'
-import profilepic from '../Assets/1a.webp'
+import profilepic from '../Assets/123.webp'
 import stroke from '../Assets/Images/Component 15.png'
 import { Link } from 'react-router-dom'
 
@@ -35,7 +35,7 @@ const Aboutme = () => {
         <div className='svg-profile'>
           <img src={profilepic} className='profile-gif'></img>
           {/* <img src={profilepic} alt='' className='profile-pic' /> */}
-          <img src={stroke} className='aboutme-icon'></img>
+          {/* <img src={stroke} className='aboutme-icon'></img> */}
           {/* 
           <svg
             // width='418'
