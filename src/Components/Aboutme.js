@@ -8,18 +8,16 @@ import { Link } from 'react-router-dom'
 
 const Aboutme = () => {
   const [loader, setLoader] = useState(true)
-  // const [loader, setLoader} = useContext(DefaultContext)
+
   const isNewSession = !sessionStorage.getItem('sessionFlag')
   console.log(isNewSession)
-  // seta(false)
+
   useEffect(() => {
     const timer = setTimeout(() => {
       sessionStorage.setItem('sessionFlag', 'true')
       setLoader(false)
       console.log(isNewSession)
     }, 2000)
-
-    // return () => clearTimeout(timer)
   }, [])
   return (
     <div>

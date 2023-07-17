@@ -4,7 +4,6 @@ import Loader from './loader'
 
 import Navbar from './Navbar'
 // images
-import image1 from '../Assets/Images/image-1.webp'
 import image3 from '../Assets/Images/image-3.webp'
 import jtbd from '../Assets/Images/JTBD_high res_new.webp'
 import streamadmincenter from '../Assets/Images/project-1/compressed-images/Stream admin center.webp'
@@ -24,8 +23,6 @@ import takethetourscans from '../Assets/Videos/Take the tour_scans.mov'
 import scanningcontainers from '../Assets/Videos/scanning-container-1.mp4'
 import tourmigrations from '../Assets/Videos/Take the tour_migrations.mov'
 import northstar from '../Assets/Videos/North star-1.mp4'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 
 const SinglePage = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -361,7 +358,9 @@ const SinglePage = () => {
                   </h4>
                 </button>
 
-                <p className={`${collapsed ? 'fre-scan-extra' : ''}`}>
+                <p
+                  className={`${collapsed ? 'fre-scan-extra transitionP' : ''}`}
+                >
                   A “First Run Experience” provides users with guidance to
                   navigate through the tool. The spotlights shown below are one
                   of the components used for onboarding.
@@ -418,7 +417,11 @@ const SinglePage = () => {
                     FRE: Migrations tab
                   </h4>
                 </button>
-                <p className={`${collapsedB ? 'fre-scan-extra' : ''}`}>
+                <p
+                  className={`${
+                    collapsedM ? 'fre-scan-extra transitionP' : ''
+                  }`}
+                >
                   A “First Run Experience” provides users with guidance to
                   navigate through the tool. The spotlights shown below are one
                   of the components used for onboarding.

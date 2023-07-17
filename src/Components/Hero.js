@@ -1,31 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react'
-// import resume from '../Assets/Resume/Trisha Mody_Resume.pdf'
-import image1 from '../Assets/Images/image-1.webp'
-import image2 from '../Assets/Images/image-2.webp'
-import image3 from '../Assets/Images/image-3.webp'
-import image4 from '../Assets/Images/image-4.webp'
-import image5 from '../Assets/Images/image-5.webp'
-import image6 from '../Assets/Images/image-6.webp'
+
 import Loader from './loader'
 import hand from '../Assets/HAND.png'
 import heroimage from '../Assets/Images/Hero image.webp'
 import { Link } from 'react-router-dom'
 import { delay, easeIn, motion } from 'framer-motion'
-// import { DefaultContext } from '../Contexts/DefaultContext'
+
 const Hero = () => {
   const [loader, setLoader] = useState(true)
-  // const [loader, setLoader} = useContext(DefaultContext)
+
   const isNewSession = !sessionStorage.getItem('sessionFlag')
   console.log(isNewSession)
-  // seta(false)
+
   useEffect(() => {
     const timer = setTimeout(() => {
       sessionStorage.setItem('sessionFlag', 'true')
       setLoader(false)
       console.log(isNewSession)
     }, 2000)
-
-    // return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -37,8 +29,6 @@ const Hero = () => {
       ) : (
         ''
       )}
-      {/* <Loader /> */}
-      {/* <Loader /> */}
       <div className='hero-parent'>
         <motion.div className='hero-sibling-one'>
           <motion.h1
@@ -97,7 +87,6 @@ const Hero = () => {
                   fill-rule='evenodd'
                   clip-rule='evenodd'
                   d='M6.00001 9.74263V0.84314H8.00001V9.74263L11.9498 5.79289L13.364 7.2071L7.00001 13.5711L0.636047 7.2071L2.05026 5.79289L6.00001 9.74263Z'
-                  // fill='black'
                 />
               </svg>
             </button>
@@ -135,24 +124,9 @@ const Hero = () => {
               <Link to='/microsoftmigration'>
                 <img src={heroimage} alt='project image' />
               </Link>
-              {/* <Link to='/project'>
-                <img src={image2} alt='project image' />
-              </Link>
-              <Link to='/project'>
-                <img src={image3} alt='project image' />
-              </Link>
-              <Link to='/project'>
-                <img src={image4} alt='project image' />
-              </Link>
-              <Link to='/project'>
-                <img src={image5} alt='project image' />
-              </Link>
-              <Link to='/project'>
-                <img src={image6} alt='project image' />
-              </Link> */}
             </div>
           </div>
-          {/*  */}
+
           <div className='hero-link'>
             <div className='hero-link-title'>
               <Link to='/aboutme'>
@@ -176,7 +150,7 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          {/*  */}
+
           <div className='hero-link'>
             <div className='hero-link-title'>
               <Link to='/letsconnect'>
@@ -220,7 +194,6 @@ const Hero = () => {
               </svg>
             </button>
           </a>
-          {/*  */}
         </motion.div>
       </div>
     </div>
