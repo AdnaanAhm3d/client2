@@ -6,12 +6,12 @@ const Loader2 = () => {
       <div class='outer'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 2307.97 407.29'
+          viewBox='0 0 2307.97 411.29'
           class='trishamody'
         >
           <defs>
             <clipPath id='clip-path'>
-              <rect id='rect' x='0' y='0' height='407.29' width='2307.97' />
+              <rect id='rect' x='0' y='0' height='411.29' width='2307.97' />
             </clipPath>
           </defs>
 

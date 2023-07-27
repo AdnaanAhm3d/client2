@@ -72,7 +72,7 @@ li {
   /* text-indent: -1.31em; */
   /* padding-left: 1em; */
 }
-
+/* 
 .bouncing-loader {
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@ li {
 
 .bouncing-loader > div:nth-child(3) {
   animation-delay: 0.4s;
-}
+} */
 
 a {
   text-decoration: none;
@@ -964,14 +964,23 @@ svg {
   /* // scale:3; */
   fill: black;
   width: 10vw;
-  /* // background:red; */
+
+  /* background: red; */
 }
 
-@media (max-width: 850px) {
+@media (max-width: 450px) {
   .trishamody {
     fill: black;
 
-    width: 25vw;
+    width: 30vw;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 850px) {
+  .trishamody {
+    fill: black;
+
+    width: 15vw;
   }
 }
 
