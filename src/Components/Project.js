@@ -7,6 +7,7 @@ import { useContext, useState, useEffect } from 'react'
 
 import { DefaultContext } from '../Contexts/DefaultContext'
 import Loader from './loader'
+import Loader2 from './Loader2'
 import heroimage from '../Assets/Images/Hero image.png'
 
 const Project = () => {
@@ -26,7 +27,7 @@ const Project = () => {
     <>
       {loader && isNewSession ? (
         <>
-          <Loader />
+          <Loader2 />
         </>
       ) : (
         ''

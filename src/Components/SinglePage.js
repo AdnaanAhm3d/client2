@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import Loader from './loader'
-
+import Loader2 from './Loader2'
 import Navbar from './Navbar'
 // images
 import image3 from '../Assets/Images/image-3.webp'
 import jtbd from '../Assets/Images/JTBD_high res_new.webp'
 import streamadmincenter from '../Assets/Images/project-1/compressed-images/Stream admin center.webp'
+import scanningcontainersimg from '../Assets/Images/project-1/compressed-images/Scanning containersimg.webp'
 import spac from '../Assets/Images/project-1/compressed-images/SP AC.webp'
+import spac2 from '../Assets/Images/project-1/compressed-images/SP AC-2.webp'
+
 import streamtilesettings from '../Assets/Images/project-1/compressed-images/Stream tile settings.webp'
 import m365 from '../Assets/Images/project-1/compressed-images/M365 Stream Tile.webp'
 import restrictvideouploadonstream from '../Assets/Images/project-1/compressed-images/Restrict video upload on Stream.webp'
@@ -89,9 +92,9 @@ const SinglePage = () => {
 
   return (
     <div>
-      {loader && isNewSession ? (
+      {loader ? (
         <>
-          <Loader />
+          <Loader2 />
         </>
       ) : (
         ''
@@ -321,15 +324,16 @@ const SinglePage = () => {
               alt=''
               className='img-project core-flow-img'
             />
-            <p>
+            <img src={spac2} alt='' className='img-project core-flow-img' />
+            <p className='newmargin-temp'>
               Step 1: Navigate to the Stream migration tool through the Stream
               Admin Center or via Migration Manager on the SharePoint Admin
-              Center
+              Center.
             </p>
-            <img src={spac} alt='' className='img-project core-flow-img-1' />
-            <p>
+            <img src={scanningcontainersimg} alt='' className='img-project ' />
+            <p className='newmargin-temp'>
               Step 2: The migration tool will automatically begin discovering
-              all the containers in your organisation
+              all the containers in your organisation.
             </p>
             <div className='fre-scans-tab'>
               <div className='fre-scans-tab-grey'>

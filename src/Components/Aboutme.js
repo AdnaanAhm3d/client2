@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import Loader from './loader'
+
 import { useRef } from 'react'
 import profilepic from '../Assets/123.webp'
 import stroke from '../Assets/Images/Component 15.png'
 import { Link } from 'react-router-dom'
+import Loader2 from './Loader2'
 
 const Aboutme = () => {
   const [loader, setLoader] = useState(true)
@@ -23,7 +25,7 @@ const Aboutme = () => {
     <div>
       {loader && isNewSession ? (
         <>
-          <Loader />
+          <Loader2 />
         </>
       ) : (
         ''

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 
 import Loader from './loader'
+import Loader2 from './Loader2'
 import hand from '../Assets/HAND.png'
 import heroimage from '../Assets/Images/Hero image.webp'
 import { Link } from 'react-router-dom'
@@ -24,7 +25,7 @@ const Hero = () => {
     <div className='hero-body'>
       {loader && isNewSession ? (
         <>
-          <Loader />
+          <Loader2 />
         </>
       ) : (
         ''
