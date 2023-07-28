@@ -1268,7 +1268,7 @@ body {
   align-items: end;
   justify-content: end;
   justify-items: end;
-  font-family: var(--FontBold);
+  font-family: var(--FontSemiBold);
   /* display: none; */
   opacity: 0;
   color: white;
@@ -1307,6 +1307,9 @@ body {
     margin: auto;
 
     font-family: var(--FontRegular);
+  }
+  .info {
+    font-family: var(--FontBold);
   }
 }
 
