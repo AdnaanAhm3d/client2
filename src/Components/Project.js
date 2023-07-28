@@ -41,7 +41,7 @@ const Project = () => {
             <div className='info'>
               <div className='info-box'>
                 <div className='info-header'>
-                  <h1>Steam Migration</h1>
+                  <h1>Stream Migration</h1>
                   <svg
                     width='20'
                     height='20'
