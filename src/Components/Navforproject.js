@@ -98,7 +98,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div class={`${toggleNav ? 'hide-links' : 'show-links'} nav-links`}>
+        <div class={`${toggleNav ? 'hide-links' : 'show-links'} nav-links z-index1000`}>
           <Link to='/project' class='nav-link'>
             <svg
               width='15'
