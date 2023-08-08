@@ -6,6 +6,7 @@ import Contact from './Components/Contact'
 import Hero from './Components/Hero'
 import Project from './Components/Project'
 import SinglePage from './Components/SinglePage'
+import ChatOp from './Components/ChatOp'
 import { lazy, Suspense } from 'react'
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
         <Route path='/aboutme' element={<Aboutme />} />
         <Route path='/letsconnect' element={<Contact />} />
         <Route path='/project' element={<Project />} />
-        <Route path='/microsoftmigration' element={<SinglePage />} />
+        <Route path='/MicrosoftMigration' element={<SinglePage />} />
+        <Route path='/AtlassianChatOps' element={<ChatOp />} />
       </Routes>
     </>
   )

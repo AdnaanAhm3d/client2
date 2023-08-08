@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Loader from './loader'
 import Loader2 from './Loader2'
 import Navbar from './Navbar'
+
 // images
 import image3 from '../Assets/Images/image-3.webp'
 import jtbd from '../Assets/Images/JTBD_high res_new.webp'
@@ -10,6 +11,7 @@ import streamadmincenter from '../Assets/Images/project-1/compressed-images/Stre
 import scanningcontainersimg from '../Assets/Images/project-1/compressed-images/Scanning containersimg.webp'
 import spac from '../Assets/Images/project-1/compressed-images/SP AC.webp'
 import spac2 from '../Assets/Images/project-1/compressed-images/SP AC-2.webp'
+import ChatOpHeroImg from '../Assets/ChatOp/Hero image-chatOps-1.webp'
 
 import streamtilesettings from '../Assets/Images/project-1/compressed-images/Stream tile settings.webp'
 import m365 from '../Assets/Images/project-1/compressed-images/M365 Stream Tile.webp'
@@ -26,8 +28,13 @@ import takethetourscans from '../Assets/Videos/Take the tour_scans.mov'
 import scanningcontainers from '../Assets/Videos/scanning-container-1.mp4'
 import tourmigrations from '../Assets/Videos/Take the tour_migrations.mov'
 import northstar from '../Assets/Videos/North star-1.mp4'
+import { Link } from 'react-router-dom'
 
 const SinglePage = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   const [collapsed, setCollapsed] = useState(true)
   const [collapsedJ, setCollapsedJ] = useState(true)
 
@@ -101,8 +108,13 @@ const SinglePage = () => {
       )}
       <Navbar />
 
-      <div className='project-div'>
-        <img src={heroimg} alt='header' className='img-1' />
+      <div className='project-div liner'>
+        <img
+          src={heroimg}
+          alt='header'
+          className='img-1'
+          style={{ borderRadius: 0 }}
+        />
         <div className='project-center'>
           <h1 className='project-header'>
             Microsoft Stream Migration: <br /> Admin Experience
@@ -128,7 +140,12 @@ const SinglePage = () => {
               making it a challenge for customers to integrate videos into their
               workflows.
             </p>
-            <img src={spac} alt='' className='img-project problem-img' />
+            <img
+              src={spac}
+              alt=''
+              className='img-project problem-img '
+              style={{ border: 'none' }}
+            />
           </div>
           <div className='the-solution'>
             <h3>The Solution</h3>
@@ -182,7 +199,12 @@ const SinglePage = () => {
                 design products or services that better meet those needs.
               </p>
             </div>
-            <img src={jtbd} alt='' className='jtbd-img' />
+            <img
+              src={jtbd}
+              alt=''
+              className='jtbd-img'
+              style={{ border: 'none' }}
+            />
             {/* <div className='table'>
               <div className='table-icon'>
                 <svg
@@ -498,11 +520,13 @@ const SinglePage = () => {
               src={mobilemessage}
               alt=''
               className='img-project  post-migration-img'
+              style={{ border: 'none' }}
             />
             <img
               src={mobileappswitcher}
               alt=''
               className='img-project  post-migration-img'
+              style={{ border: 'none' }}
             />
           </div>
 
@@ -635,15 +659,32 @@ const SinglePage = () => {
             <h5>Nikita (Developer)</h5>
           </div>
 
-          {/* <Link to='/project'> */}
-          <div className='next-project'>
-            <div className='header'>
-              <h2>Next Project</h2>
-              <h2>Coming soon</h2>
+          <Link to='/AtlassianChatOps' onClick={scrollToTop}>
+            <div className='next-project'>
+              <div className='header'>
+                <h2>Next Project</h2>
+                 <div className='np'>
+                  <svg
+                    width='18'
+                    height='18'
+                    viewBox='0 0 18 18'
+                    fill='#424242'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      clip-rule='evenodd'
+                      d='M0.999972 0.75H14.25V14H11.75V5.01777L1.88386 14.8839L0.116089 13.1161L9.98221 3.25H0.999972V0.75Z'
+                      fill='#424242'
+                    />
+                  </svg>
+                  <h2>Atlassian ChatOps</h2>
+                </div>
+      
+              </div>
+              <img src={ChatOpHeroImg} alt='' className='img-project' />
             </div>
-            <img src={image3} alt='' className='img-project' />
-          </div>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
     </div>

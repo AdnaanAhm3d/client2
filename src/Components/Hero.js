@@ -4,6 +4,7 @@ import Loader from './loader'
 import Loader2 from './Loader2'
 import hand from '../Assets/HAND.png'
 import heroimage from '../Assets/Images/Hero image.webp'
+import chatopheroimage from '../Assets/ChatOp/Hero image-chatOps-1.webp'
 import { Link } from 'react-router-dom'
 import { delay, easeIn, motion } from 'framer-motion'
 
@@ -122,8 +123,11 @@ const Hero = () => {
               </Link>
             </div>
             <div className='hero-project-tiles'>
-              <Link to='/microsoftmigration'>
+              <Link to='/MicrosoftMigration'>
                 <img src={heroimage} alt='project image' />
+              </Link>
+              <Link to='/AtlassianChatOps'>
+                <img src={chatopheroimage} alt='project image' />
               </Link>
             </div>
           </div>

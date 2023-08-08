@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import Loader from './loader'
 
 import { useRef } from 'react'
-import profilepic from '../Assets/123.webp'
+import profilepic from '../Assets/123-1.webp'
 import stroke from '../Assets/Images/Component 15.png'
 import { Link } from 'react-router-dom'
 import Loader2 from './Loader2'

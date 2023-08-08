@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 // import profilegif from '../Assets/Videogif.gif'
 import stroke from '../Assets/Images/Component 15.png'
 
-import profilepic from '../Assets/123.webp'
+import profilepic from '../Assets/123-1.webp'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import Loader2 from './Loader2'

@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav class={`navbar noscroll `}>
       <div class='nav-center'>
-        <div class='nav-header'>
+        <div class='nav-header z-index1000 '>
           <Link to='/' class='nav-logo'>
             <h1>trishamody</h1>
           </Link>
